@@ -24,10 +24,10 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "tours")
+    @Bean(name = "bookings")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema toursSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("ToursPort");
+        wsdl11Definition.setPortTypeName("BookingsPort");
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace("https://courses.fit.cvut.cz/NI-AM1/tutorials/web-services/");
         wsdl11Definition.setSchema(toursSchema);
@@ -35,7 +35,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     }
 
     @Bean
-    public XsdSchema toursSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("tours.xsd"));
+    public XsdSchema bookingsSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("bookings.xsd"));
     }
 }

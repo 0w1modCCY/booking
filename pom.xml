@@ -80,7 +80,7 @@
                 </executions>
                 <configuration>
                     <sources>
-                        <source>${project.basedir}/src/main/resources/tours.xsd</source>
+                        <source>${project.basedir}/src/main/resources/bookings.xsd</source>
                     </sources>
                 </configuration>
             </plugin>
